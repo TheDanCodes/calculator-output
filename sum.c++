@@ -1,22 +1,41 @@
-// C++ program to find the sum of first n natural numbers
-// positive integers such as 1,2,3,...n are known as natural numbers
-
-#include <iostream>
-
+# include <iostream>
 using namespace std;
 
 int main() {
-    int num, sum;
-    sum = 0;
 
-    cout << "Enter a positive integer: ";
-    cin >> num;
+  char op;
+  float num1, num2;
 
-    for (int i = 1; i <= num; ++i) {
-        sum += i;
-    }
+  cout << "Enter operator: +, -, *, /: ";
+  cin >> op;
 
-    cout << "Sum = " << sum << endl;
+  cout << "Enter two operands: ";
+  cin >> num1 >> num2;
 
-    return 0;
+  switch(op) {
+
+    case '+':
+      cout << num1 << " + " << num2 << " = " << num1 + num2;
+      break;
+
+    case '-':
+      cout << num1 << " - " << num2 << " = " << num1 - num2;
+      break;
+
+    case '*':
+      cout << num1 << " * " << num2 << " = " << num1 * num2;
+      break;
+
+    case '/':
+      cout << num1 << " / " << num2 << " = " << num1 / num2;
+      break;
+
+    default:
+      // If the operator is other than +, -, * or /, error message is shown
+      cout << "Error! operator is not correct";
+      break;
+  }
+
+  return 0;
 }
+
